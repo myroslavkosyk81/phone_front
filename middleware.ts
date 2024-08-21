@@ -10,7 +10,8 @@ export default clerkMiddleware((auth, request) => {
   if(!isPublicRoute(request)) {
     auth().protect();
   }
-}, { debug: true });
+});
+// }, { debug: true });
  
  export const config = {
    matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
